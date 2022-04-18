@@ -3,8 +3,7 @@ package allowedRegionsForRGAndResources
 import "azure.platform/config/v1/managementGroup:managementGroup"
 
 _scopeAndID: [
-	{scope: "landing-zones", id: "nav-policy-e5cbfcb4-4a0"},
-	{scope: "platform", id: "nav-policy-4af3f96a-6dd"}
+	{scope: "hybrid", id: "43ac-b255-2d65ef49b805"}
 ]
 
 [for sid in _scopeAndID {
@@ -13,11 +12,10 @@ _scopeAndID: [
 	parameters: {
 		scope: value: "/providers/Microsoft.Management/managementGroups/\(managementGroup.#nodes[sid.scope])"
 		policyDefinitionID: {
-			value: "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c"
+			value: "/providers/Microsoft.Authorization/policyDefinitions/4733ea7b-a883-42fe-8cac-97454c2a9e4a"
 			metadata: version: "1.0.0"
 		}
-		policyAssignmentDisplayName: value: "Allowed Regions for RG and Resources"
+		policyAssignmentDisplayName: value: "Audit SA without infrastructure encryption"
 		policyAssignmentID: value: sid.id
-		parameters: value: listOfAllowedLocations: value: ["norwayeast", "norwaywest"]
 	}
 }]
