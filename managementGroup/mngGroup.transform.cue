@@ -3,14 +3,14 @@ package managementGroup
 import "list"
 
 _root: {
-    id: _nodes["\(_nodeKeys[0])"] 
-    name: _nodeKeys[0]
+    id: #nodes["\(#nodeKeys[0])"] 
+    name: #nodeKeys[0]
 }
 
 _children:  [for aParent,childList in _hierarchy, for child in childList {
-                id: _nodes["\(child)"]
+                id: #nodes["\(child)"]
                 name: child
-                parent: _nodes["\(aParent)"]
+                parent: #nodes["\(aParent)"]
             }]
 
 $schema: "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#"

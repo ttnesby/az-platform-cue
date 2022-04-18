@@ -1,6 +1,6 @@
 package managementGroup
 
-_nodes: {
+#nodes: {
 	nav:             "77b612df-5cc8-4114-b11f-0ab74eadbdf6"
 	sandboxes:       "b63fce10-f7dc-4812-8d2d-21aceb1c1c2e"
 	decommissioned:  "ef344fb7-242b-4940-9e97-dccabba22659"
@@ -26,5 +26,3 @@ _hierarchy: {
 	hybrid: ["hybrid-dev", "hybrid-test", "hybrid-prod"]
 	platform: ["identity", "management", "connectivity"]
 }
-
-test: "torstein"
