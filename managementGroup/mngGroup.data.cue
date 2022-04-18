@@ -26,3 +26,5 @@ _hierarchy: {
 	hybrid: ["hybrid-dev", "hybrid-test", "hybrid-prod"]
 	platform: ["identity", "management", "connectivity"]
 }
+
+test: "torstein"
