@@ -10,10 +10,11 @@ _root: {
     name: #nodeKeys[0]
 }
 
-_children:  [for aParent,childList in _hierarchy, for child in childList {
-                id: #nodes["\(child)"]
-                name: child
-                parent: #nodes["\(aParent)"]
-            }]
+_children: [
+    for aParent,childList in _hierarchy, for child in childList {
+        id: #nodes["\(child)"]
+        name: child
+        parent: #nodes["\(aParent)"]
+    }]
 
 result: deployment.#Parameters & {#in: managementGroupsList: value: list.FlattenN([_root, _children],-1)}
