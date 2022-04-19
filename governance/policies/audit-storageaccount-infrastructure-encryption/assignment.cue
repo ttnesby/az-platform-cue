@@ -15,4 +15,4 @@ _scopes: policyAssignment.#ScopeList & [
 		{scope: managementGroup.#nodes["hybrid"], assignmentId: "43ac-b255-2d65ef49b805"}
 	]
 
-policyAssignment.#Parameters & { in: _a } 
+policyAssignment.#Parameters & { #in: _a } 

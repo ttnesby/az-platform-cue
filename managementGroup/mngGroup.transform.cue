@@ -1,6 +1,9 @@
 package managementGroup
 
-import "list"
+import (
+    "list"
+    "azure.platform/config/v1/deployment:deployment"
+)
 
 _root: {
     id: #nodes["\(#nodeKeys[0])"] 
@@ -13,6 +16,4 @@ _children:  [for aParent,childList in _hierarchy, for child in childList {
                 parent: #nodes["\(aParent)"]
             }]
 
-$schema: "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#"
-contentVersion: "1.0.0.0",
-parameters: managementGroupsList: value: list.FlattenN([_root, _children],-1)
+result: deployment.#Parameters & {#in: managementGroupsList: value: list.FlattenN([_root, _children],-1)}
