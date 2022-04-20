@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "type": {
+      "value": "resourceGroup"
+    },
+    "resourceId": {
+      "value": "/subscriptions/f5189bd5-f785-4b64-b0fd-093e59f7fa08/resourceGroups/lz-network"
+    },
+    "policyAssignmentId": {
+      "value": "/subscriptions/f5189bd5-f785-4b64-b0fd-093e59f7fa08/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn"
+    },
+    "displayName": {
+      "value": "exemption of SecurityCenterBuiltIn with code"
+    },
+    "expiryDate": {
+      "value": "2022-05-15"
+    }
+  }
+}

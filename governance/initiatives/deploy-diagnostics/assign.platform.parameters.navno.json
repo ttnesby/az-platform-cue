@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "scope": {
+      "value": "/providers/Microsoft.Management/managementGroups/9ae25ff1-8008-46b3-8d6f-f6d1078cec3f",
+      "metadata": {
+        "name": "platform in navno"
+      }
+    },
+    "policyDefinitionID": {
+      "value": "/providers/Microsoft.Management/managementGroups/#NAVMGID#/providers/Microsoft.Authorization/policySetDefinitions/fb615e09-4fb2-4014-8c03-b4fdab7315ff-v1.4.0",
+      "metadata": {
+        "version": "1.4.0"
+      }
+    },
+    "policyAssignmentDisplayName": {
+      "value": "Deploy Diagnostics - v1.4.0"
+    },
+    "policyAssignmentID": {
+      "value": "nav-policy-f65a168d-447"
+    },
+    "requiresManagedIdentity": {
+      "value": true
+    },
+    "parameters": {
+      "value": {
+        "logAnalytics": {
+          "value": "/subscriptions/7e260459-3026-4653-b259-0347c0bb5970/resourcegroups/centralla/providers/microsoft.operationalinsights/workspaces/az-platform-central-logs"
+        }
+      }
+    },
+    "roleDefinitionIds": {
+      "value": [
+        "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+        "/providers/microsoft.authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+      ]
+    }
+  }
+}

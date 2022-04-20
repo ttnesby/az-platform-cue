@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "type": {
+      "value": "resourceGroup"
+    },
+    "resourceId": {
+      "value": "/subscriptions/575a53ac-e2a1-4215-b45f-028ec4f6f2a5/resourceGroups/p-virtualwan"
+    },
+    "policyAssignmentId": {
+      "value": "/providers/Microsoft.Management/managementGroups/9ae25ff1-8008-46b3-8d6f-f6d1078cec3f/providers/Microsoft.Authorization/policyAssignments/nav-policy-f65a168d-447"
+    },
+    "displayName": {
+      "value": "Exempt VirtualHub ER Gateway from Diagnostics"
+    },
+    "expiryDate": {
+      "value": "2024-03-07"
+    },
+    "descriptions": {
+      "value": "Need to exempt this because the deployment fails on expressroute gw"
+    },
+    "policyDefinitionReferenceIds": {
+      "value": ["diagnostics-expressroutegateways"]
+    }
+  }
+}
