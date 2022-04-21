@@ -17,4 +17,4 @@ _scopes: policyAssignment.#ScopeList & [
 	{scope: managementGroup.#nodes["platform"], assignmentId: "nav-policy-4af3f96a-6dd"}
 ]
 
-policyAssignment.#Parameters & { #in: _a } 
+policyAssignment.#Parameters & { #in: _a }

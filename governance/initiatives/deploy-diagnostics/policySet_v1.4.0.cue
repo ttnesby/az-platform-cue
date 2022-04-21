@@ -1,4 +1,4 @@
-package deployDiagnostics
+package deployDiagnosticsPolicy
 
 import (
 	"list"
@@ -24,7 +24,7 @@ parameters: logAnalytics: {
 	}
 }
 
-_customPolicies: [diagnosticsApplicationGateway,diagnosticsAzureFirewall]
+_customPolicies: [diagnosticsApplicationGateway,diagnosticsAzureFirewall] 
 _builtInPolicies: [{id: "6f8f98a4-f108-47cb-8e98-91a0d85cd474", refId: "diagStorageAccount"}]
 
 policyDefinitions: list.FlattenN([

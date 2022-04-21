@@ -10,10 +10,13 @@ import (
     let tmp = [for e in #in.scopes {                
             policyDefinitionID: value: #in.definitionId
             policyAssignmentDisplayName: value: #in.displayName
+            if #in.managedIdentity != _|_ {requiresManagedIdentity: value: #in.managedIdentity}
+            if #in.uaiResourceId != _|_ {uaiResourceID: value: #in.uaiResourceId}
             if #in.params != _|_ {parameters: value: #in.params}
+            if #in.roleDefinitionId != _|_ {roleDefinitionIds: value: #in.roleDefinitionId} 
             scope: value: "/providers/Microsoft.Management/managementGroups/\(e.scope)"
             policyAssignmentID: value: e.assignmentId        
     }]
 
-    result:[for e in tmp {deployment.#Parameters & { #in: e } }]
+    r:[for e in tmp {deployment.#Parameters & { #in: e } }]
 }

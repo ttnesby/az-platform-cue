@@ -17,4 +17,4 @@ _children: [
         parent: #nodes["\(aParent)"]
     }]
 
-result: deployment.#Parameters & {#in: managementGroupsList: value: list.FlattenN([_root, _children],-1)}
+r: deployment.#Parameters & {#in: managementGroupsList: value: list.FlattenN([_root, _children],-1)}
