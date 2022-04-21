@@ -1,4 +1,4 @@
-package allowedRegionsForRGAndResources
+package auditStorageAccountInfrastructureEncryption
 
 import (
 	"azure.platform/config/v1/managementGroup:managementGroup"
